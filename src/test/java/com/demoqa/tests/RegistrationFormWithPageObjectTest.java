@@ -24,8 +24,6 @@ public class RegistrationFormWithPageObjectTest extends TestBase {
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Заполнение пользователем формы регистрации")
     void fillFormTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Открываем  страницу с формой регистрации", () -> {
             registrationFormPage.openPage() ;
         });
@@ -58,5 +56,4 @@ public class RegistrationFormWithPageObjectTest extends TestBase {
                     .checkResults("State and City", "Uttar Pradesh Agra") ;
         });
     }
-
 }
